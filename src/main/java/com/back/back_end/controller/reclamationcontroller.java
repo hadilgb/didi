@@ -2,7 +2,11 @@ package com.back.back_end.controller;
 
 
 import com.back.back_end.model.Reclamation;
+import com.back.back_end.repository.ProductRepository;
+import com.back.back_end.repository.categoryRepository;
 import com.back.back_end.repository.reclamationrepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +17,12 @@ import java.util.Optional;
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/reclamation")
 public class reclamationcontroller {
+
     private reclamationrepository repo;
+    @Autowired
+    public reclamationcontroller(reclamationrepository repo){
+        this.repo=repo;
+    }
     @GetMapping("/get")
     public List<Reclamation> getall(){
         return repo.findAll();

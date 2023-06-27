@@ -18,4 +18,5 @@ public class Reclamation {
     private String email;
     private String message;
     private String etat;
+    private String date;
 }
