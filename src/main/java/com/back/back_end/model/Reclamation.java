@@ -15,8 +15,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Reclamation {
     @Id
     private String idrec;
-    private String iduser;
+    private String email;
     private String message;
-    private EtatRec etat;
-
+    private String etat;
 }
