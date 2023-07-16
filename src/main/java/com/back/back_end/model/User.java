@@ -69,4 +69,8 @@ public class User  implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    public void setStatus(Status stat) {
+        this.status = stat;
+    }
 }

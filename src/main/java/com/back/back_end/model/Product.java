@@ -29,4 +29,6 @@ public class Product {
 	  private String imgUrl;
 	  private long nombreClic = 0;
 	  private long nombrevente = 0;
+
+
 }
